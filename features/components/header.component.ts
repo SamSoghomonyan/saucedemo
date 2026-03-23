@@ -7,3 +7,5 @@ class HeaderComponent {
     await this.cartIcon.click()
   }
 }
+
+export default new HeaderComponent()
