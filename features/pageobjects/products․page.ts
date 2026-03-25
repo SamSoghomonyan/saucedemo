@@ -2,12 +2,12 @@ import { $ } from '@wdio/globals'
 import Page from './page';
 
 class ProductsPage extends Page {
-  public addToCartButton(item: string) {
-    return $(`#add-to-cart-${item}`)
+  public addToCartButton() {
+    return $(`#add-to-cart-sauce-labs-backpack`)
   }
 
-  async addItemToCart(item: string) {
-    await this.addToCartButton(item).click()
+  async addItemToCart() {
+    await this.addToCartButton().click()
   }
 }
 

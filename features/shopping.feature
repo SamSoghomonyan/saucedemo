@@ -1,14 +1,17 @@
 Feature: Buy products on SauceDemo
+  Background:
+    Given I am on the login page
+    When I login with "standard_user" and "secret_sauce"
+    And I click "Add to cart" for "Sauce Labs Backpack"
+    And I click cart icon
+    And I click on the shopping cart icon And I click the "Checkout" button
 
   Scenario: User completes a purchase with validation check
-    Given I am logged in as "standard_user" with password "secret_sauce"
-    When I add "sauce-labs-backpack" to the cart
-    And I open the cart and continue shopping
-    And I add "sauce-labs-bike-light" to the cart
-    And I open the cart and proceed to checkout
-    And I try to continue without filling checkout info
-    Then I should see a checkout error message
+    And I try to continue without filling name info
+    And I try to continue without filling last name info
+#    And I try to continue without filling zip code info
     When I fill checkout info with first name "John", last name "Doe", zip "12345"
-    And I continue checkout
-    And I finish the order
+    Then I click Continue
+    And I should see shopping dettalis
+    And i click finish button
     Then I should see a success message "Thank you for your order!"

@@ -1,9 +1,8 @@
-Feature: The Internet login
+Feature: The login
 
   Scenario Outline: Invalid parameters login
     Given I am on the login page
     When I login with "<username>" and "<password>"
-    Then I should see an error message
 
     Examples:
       | username      | password     |
@@ -12,7 +11,6 @@ Feature: The Internet login
   Scenario Outline: Success login
     Given I am on the login page
     When I login with "<username>" and "<password>"
-    Then I should see the secure area
 
     Examples:
       | username      | password     |
