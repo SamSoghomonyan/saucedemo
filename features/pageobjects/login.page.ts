@@ -14,10 +14,13 @@ class LoginPage extends Page {
     return $('#login-button');
   }
 
-  public get lockedOutError () {
-    return $('//*[text()="Epic sadface: Sorry, this user has been locked out."]');
+  public get errorMessage(){
+    return $('#login_button_container > div > form > div.error-message-container.error > h3')
   }
 
+  public get successMessage(){
+    return $('#item_4_title_link > div')
+  }
 
   public async login (username: string, password: string) {
     await this.inputUsername.setValue(username);
@@ -25,8 +28,12 @@ class LoginPage extends Page {
     await this.loginButton.click();
   }
 
-  public async verifyLockedOutUserError() {
-    await expect(this.lockedOutError).toBeDisplayed();
+  async getErrorMessage(){
+    return await this.errorMessage.getText();
+  }
+
+  async getSuccessMessage(){
+    return await this.successMessage.getText();
   }
 
   public open () {
