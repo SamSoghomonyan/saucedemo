@@ -10,10 +10,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    env:
-      CREDENTIALS: ${{ secrets.CREDENTIALS }}
-      TOKEN: ${{ secrets.TOKEN }}
-
     steps:
       - uses: actions/checkout@v4
 
