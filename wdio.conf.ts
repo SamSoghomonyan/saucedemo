@@ -51,9 +51,20 @@ export const config: WebdriverIO.Config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [{
-        browserName: 'chrome'
-    }],
+    capabilities: [
+        {
+            browserName: 'chrome',
+            'goog:chromeOptions': {
+                args: ['--disable-gpu', '--window-size=1920,1080']
+            },
+        },
+        {
+            browserName: 'Firefox',
+            'ms:edgeOptions': {
+                args: ['--disable-gpu', '--window-size=1920,1080']
+            },
+        }
+    ],
 
     //
     // ===================
