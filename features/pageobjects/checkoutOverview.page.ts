@@ -1,30 +1,30 @@
-import { $ } from '@wdio/globals'
+import { $ } from '@wdio/globals';
 import Page from './page';
 
 class CheckOverviewPage extends Page{
   public get price(){
-    return $('#checkout_summary_container > div > div.cart_list > div.cart_item > div.cart_item_label > div.item_pricebar > div')
+    return $('#checkout_summary_container > div > div.cart_list > div.cart_item > div.cart_item_label > div.item_pricebar > div');
   }
   public get itemTotal(){
-    return $('#checkout_summary_container > div > div.summary_info > div.summary_subtotal_label')
+    return $('#checkout_summary_container > div > div.summary_info > div.summary_subtotal_label');
   }
   public get tax(){
-    return $('#checkout_summary_container > div > div.summary_info > div.summary_tax_label')
+    return $('#checkout_summary_container > div > div.summary_info > div.summary_tax_label');
   }
   public get total(){
-    return $('#checkout_summary_container > div > div.summary_info > div.summary_total_label')
+    return $('#checkout_summary_container > div > div.summary_info > div.summary_total_label');
   }
   public get finishButton(){
-    return $('#finish')
+    return $('#finish');
   }
   public get cancleButton(){
-    return $('#cancel')
+    return $('#cancel');
   }
   async getPrice(){
     return await this.price.getText();
   }
   async getItemTotal(){
-     return await this.itemTotal.getText()
+     return await this.itemTotal.getText();
   }
   async getTax(){
     return await this.tax.getText();
@@ -33,7 +33,7 @@ class CheckOverviewPage extends Page{
     return await this.total.getText();
   }
   async clickCancelButton(){
-    await this.cancleButton.click()
+    await this.cancleButton.click();
   }
   async clickFinishButton(){
     await this.finishButton.click();

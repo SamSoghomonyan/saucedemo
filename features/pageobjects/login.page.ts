@@ -1,4 +1,4 @@
-import { $ } from '@wdio/globals'
+import { $ } from '@wdio/globals';
 import Page from './page';
 
 class LoginPage extends Page {
@@ -15,11 +15,11 @@ class LoginPage extends Page {
   }
 
   public get errorMessage(){
-    return $('#login_button_container > div > form > div.error-message-container.error > h3')
+    return $('#login_button_container > div > form > div.error-message-container.error > h3');
   }
 
   public get successMessage(){
-    return $('#item_4_title_link > div')
+    return $('#item_4_title_link > div');
   }
 
   public async login (username: string, password: string) {

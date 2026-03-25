@@ -1,26 +1,26 @@
-import { $ } from '@wdio/globals'
+import { $ } from '@wdio/globals';
 import Page from './page';
 class YourInformationPage extends Page {
   public pageName(){
-    return $('#header_container > div.header_secondary_container > span')
+    return $('#header_container > div.header_secondary_container > span');
   }
   public get firstName(){
-    return $('#first-name')
+    return $('#first-name');
   }
   public get lastName(){
-    return $('#last-name')
+    return $('#last-name');
   }
   public get zip(){
-    return $('#postal-code')
+    return $('#postal-code');
   }
   public get continueButton(){
-    return $('#continue')
+    return $('#continue');
   }
   public get cancelButton(){
-    return $('#cancel')
+    return $('#cancel');
   }
   public get errMessage(){
-    return $('#checkout_info_container > div > form > div.checkout_info > div.error-message-container.error > h3')
+    return $('#checkout_info_container > div > form > div.checkout_info > div.error-message-container.error > h3');
   }
   async getPageName(){
     return await this.pageName().getText();
@@ -43,7 +43,7 @@ class YourInformationPage extends Page {
     await this.continueButton.click();
   }
   async clickCancelButton(){
-    return await this.cancelButton.click()
+    return await this.cancelButton.click();
   }
   async getErrorMessage(){
     await this.errMessage.waitForDisplayed({

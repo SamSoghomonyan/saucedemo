@@ -10,13 +10,12 @@ When('I login with {string} and {string}', async (username: string, password: st
   await LoginPage.login(username, password);
 });
 
-
 Then('I should see an error message', async () => {
-  const text =await LoginPage.getErrorMessage()
+  const text =await LoginPage.getErrorMessage();
   expect(text).toEqual('Epic sadface: Username and password do not match any user in this service');
 });
 
 Then('I should see the secure area', async () => {
-  const text = await LoginPage.getSuccessMessage()
+  const text = await LoginPage.getSuccessMessage();
   expect(text).toEqual('Sauce Labs Backpack');
 });

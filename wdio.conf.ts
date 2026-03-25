@@ -173,7 +173,6 @@ export const config: WebdriverIO.Config = {
         ignoreUndefinedDefinitions: false
     },
 
-
     //
     // =====
     // Hooks
@@ -350,4 +349,4 @@ export const config: WebdriverIO.Config = {
     */
     // afterAssertion: function(params) {
     // }
-}
+};

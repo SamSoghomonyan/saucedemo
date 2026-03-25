@@ -3,16 +3,22 @@
   "type": "module",
   "devDependencies": {
     "@types/node": "^25.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.2",
+    "@typescript-eslint/parser": "^8.57.2",
     "@wdio/allure-reporter": "^9.27.0",
     "@wdio/cli": "^9.26.1",
     "@wdio/cucumber-framework": "^9.26.1",
     "@wdio/globals": "^9.26.1",
     "@wdio/local-runner": "^9.26.1",
     "@wdio/spec-reporter": "^9.26.1",
+    "eslint": "^9.39.4",
+    "eslint-plugin-wdio": "^9.27.0",
     "expect-webdriverio": "^5.6.5"
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.ts",
-    "allure":"npx allure serve allure-results"
+    "allure": "npx allure serve allure-results",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   }
 }

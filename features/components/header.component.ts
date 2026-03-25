@@ -1,11 +1,11 @@
 class HeaderComponent {
   public get cartIcon() {
-    return $('#shopping_cart_container a')
+    return $('#shopping_cart_container a');
   }
 
   async openCart() {
-    await this.cartIcon.click()
+    await this.cartIcon.click();
   }
 }
 
-export default new HeaderComponent()
+export default new HeaderComponent();

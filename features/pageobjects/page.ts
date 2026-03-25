@@ -1,8 +1,8 @@
-import { browser } from '@wdio/globals'
+import { browser } from '@wdio/globals';
 
 export default class Page {
 
     public open () {
-        return browser.url('https://www.saucedemo.com/')
+        return browser.url('https://www.saucedemo.com/');
     }
 }
