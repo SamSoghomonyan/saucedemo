@@ -1,3 +1,4 @@
+
 export const config: WebdriverIO.Config = {
     //
     // ====================
@@ -55,14 +56,26 @@ export const config: WebdriverIO.Config = {
         {
             browserName: 'chrome',
             'goog:chromeOptions': {
-                args: ['--disable-gpu', '--window-size=1920,1080']
-            },
+                args: [
+                    '--headless',
+                    '--disable-gpu',
+                    '--window-size=1920,1080',
+                    '--no-sandbox',
+                    '--disable-dev-shm-usage'
+                ],
+            }
         },
         {
             browserName: 'Firefox',
             'ms:edgeOptions': {
-                args: ['--disable-gpu', '--window-size=1920,1080']
-            },
+                args: [
+                    '--headless',
+                    '--disable-gpu',
+                    '--window-size=1920,1080',
+                    '--no-sandbox',
+                    '--disable-dev-shm-usage'
+                ],
+            }
         }
     ],
 
