@@ -5,18 +5,18 @@ This project contains automated UI tests for the SauceDemo website using Webdriv
 
 ## 🛠️ Setup
 
-1.Install dependencies:
-
+1. Install dependencies:
+   
     npm install
 
+2. Run tests:
 
-2.Run tests and generate Allure report:
+   wdio run ./wdio.conf.ts
 
-    npm run wdio && npm run report:generate && npm run report:open
+3. Generate and open Allure report:
 
-3.Alternatively, serve Allure results manually:
+   npm run report:generate && npm run report:open
 
+4. Alternatively, serve Allure report in one command:
 
-    npx allure serve allure-results
-
-
+   npm run allure

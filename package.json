@@ -16,8 +16,13 @@
     "expect-webdriverio": "^5.6.5"
   },
   "scripts": {
-    "wdio": "npm run wdio && npm run report:generate && npm run report:open",
-    "allure": "npx allure serve allure-results",
+    "wdio": "wdio run ./wdio.conf.ts",
+
+    "report:generate": "npx allure-commandline generate allure-results --clean",
+    "report:open": "npx allure-commandline open",
+
+    "allure": "npx allure-commandline serve allure-results",
+
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   }
