@@ -9,7 +9,7 @@ Feature: Buy products on SauceDemo
   Scenario: User completes a purchase with validation check
     And I try to continue without filling name info
     And I try to continue without filling last name info
-#    And I try to continue without filling zip code info
+    And I try to continue without filling zip code info
     When I fill checkout info with first name "John", last name "Doe", zip "12345"
     Then I click Continue
     And I should see shopping dettalis
