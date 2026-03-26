@@ -26,6 +26,7 @@ Then('I try to continue without filling last name info', async () => {
 });
 
 Then('I try to continue without filling zip code info', async () => {
+  await browser.refresh();
   await YourInformationPage.addName("Sam");
   await YourInformationPage.addLastName("Soghomonyan");
   await YourInformationPage.clickContinueButton();
@@ -34,6 +35,7 @@ Then('I try to continue without filling zip code info', async () => {
 });
 
 When('I fill checkout info with first name "John", last name "Doe", zip "12345"',async ()=>{
+  await browser.refresh();
   await YourInformationPage.addName("John");
   await YourInformationPage.addLastName("Doe");
   await YourInformationPage.addZipCode(12345);
